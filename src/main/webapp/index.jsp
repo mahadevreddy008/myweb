@@ -1,5 +1,5 @@
 <html>  
 <body>  
-< out.print(mahdev wellcome to devops world); >  
+<% out.print(2*5); %>  
 </body>  
-</html> 
+</html>
