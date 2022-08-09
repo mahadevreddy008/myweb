@@ -1,34 +1,33 @@
-    
-function populateHeroes(obj) {
-  const section = document.querySelector('section');
-  const heroes = obj.members;
-
-  for (const hero of heroes) {
-    const myArticle = document.createElement('article');
-    const myH2 = document.createElement('h2');
-    const myPara1 = document.createElement('p');
-    const myPara2 = document.createElement('p');
-    const myPara3 = document.createElement('p');
-    const myList = document.createElement('ul');
-
-    myH2.textContent = hero.name;
-    myPara1.textContent = `Secret identity: ${hero.secretIdentity}`;
-    myPara2.textContent = `Age: ${hero.age}`;
-    myPara3.textContent = 'Superpowers:';
-
-    const superPowers = hero.powers;
-    for (const power of superPowers) {
-      const listItem = document.createElement('li');
-      listItem.textContent = power;
-      myList.appendChild(listItem);
-    }
-
-    myArticle.appendChild(myH2);
-    myArticle.appendChild(myPara1);
-    myArticle.appendChild(myPara2);
-    myArticle.appendChild(myPara3);
-    myArticle.appendChild(myList);
-
-    section.appendChild(myArticle);
+<html>
+<head>
+  <title>Echoing HTML Request Parameters</title>
+</head>
+<body>
+  <h3>Choose an author:</h3>
+  <form method="get">
+    <input type="checkbox" name="author" value="Tan Ah Teck">Tan
+    <input type="checkbox" name="author" value="Mohd Ali">Ali
+    <input type="checkbox" name="author" value="Kumar">Kumar
+    <input type="submit" value="Query">
+  </form>
+ 
+  <%
+  String[] authors = request.getParameterValues("author");
+  if (authors != null) {
+  %>
+    <h3>You have selected author(s):</h3>
+    <ul>
+  <%
+      for (int i = 0; i < authors.length; ++i) {
+  %>
+        <li><%= authors[i] %></li>
+  <%
+      }
+  %>
+    </ul>
+    <a href="<%= request.getRequestURI() %>">BACK</a>
+  <%
   }
-}
+  %>
+</body>
+</html>
