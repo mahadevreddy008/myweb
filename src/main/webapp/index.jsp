@@ -1,5 +1,5 @@
-<html>
-<body>
-	<h1 style="color: green; font-size: 40px;" align="center">  MAHADEV REDDY</h1>
-</body>
+<html>  
+<body>  
+<h1 style="color:blue;text-align:center">Mahadev wellcome to DevOps world</h1>  
+</body>  
 </html>
