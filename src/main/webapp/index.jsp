@@ -21,9 +21,9 @@
     
     <h2>Services</h2>
     <ul>
-        <li>Service 1</li>
-        <li>Service 2</li>
-        <li>Service 3</li>
+        <li>Software Development</li>
+        <li>Cloud Solutions</li>
+        <li>Digital Transformation</li>
     </ul>
     
     <footer>
