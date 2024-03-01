@@ -13,6 +13,9 @@
     <properties>
         <docker.image.prefix>kammana</docker.image.prefix>
         <sonar.host.url>http://65.0.95.44:9000/</sonar.host.url>
+        <!-- Add these properties for Java version -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -44,17 +47,16 @@
     </pluginRepositories>
 
     <build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-war-plugin</artifactId>
-            <version>3.3.2</version> <!-- Updated version -->
-            <configuration>
-                <!-- Any additional configuration if needed -->
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
-
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <!-- Removed source and target configuration, using properties -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
