@@ -38,4 +38,22 @@
     <pluginRepositories>
         <pluginRepository>
             <id>org.apache.maven.plugins</id>
-            <name>Maven.org</n
+            <name>Maven.org</name>
+            <url>http://repo1.maven.org/maven2</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version> <!-- Updated version -->
+                <configuration>
+                    <!-- Any additional configuration if needed -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
