@@ -48,7 +48,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version> <!-- Update to a newer version if needed -->
+                <version>3.3.2</version> <!-- Update to a newer version if needed -->
                 <configuration>
                     <source>1.8</source> <!-- Set source compatibility to Java 8 -->
                     <target>1.8</target> <!-- Set target compatibility to Java 8 -->
