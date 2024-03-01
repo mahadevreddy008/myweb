@@ -2,59 +2,39 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4.0.0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>in.javahome</groupId>
-    <artifactId>myweb</artifactId>
-    <packaging>war</packaging>
-    <version>17.0.10</version>
-    <name>Java Home myweb</name>
-    <url>http://maven.apache.org</url>
-
-    <properties>
-        <docker.image.prefix>kammana</docker.image.prefix>
-        <sonar.host.url>http://65.0.95.44:9000/</sonar.host.url>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>nexusRepo</id>
-            <url>http://18.118.252.117:8081/repository/sample-snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>nexusRepo</id>
-            <url>http://18.118.252.117:8081/repository/sample-releases/</url>
-        </repository>
-    </distributionManagement>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>org.apache.maven.plugins</id>
-            <name>Maven.org</name>
-            <url>http://repo1.maven.org/maven2</url>
-        </pluginRepository>
-    </pluginRepositories>
+    <!-- Other elements omitted for brevity -->
 
     <build>
         <plugins>
+            <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3.2</version> <!-- Update to a newer version if needed -->
+                <version>3.8.1</version> <!-- Updated version -->
                 <configuration>
-                    <source>1.8</source> <!-- Set source compatibility to Java 8 -->
-                    <target>1.8</target> <!-- Set target compatibility to Java 8 -->
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            
+            <!-- Maven War Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+                <configuration>
+                    <!-- Any additional configuration if needed -->
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <!-- Add this repository with HTTPS -->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
 
 </project>
